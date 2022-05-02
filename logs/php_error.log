@@ -1,0 +1,125 @@
+[30-Apr-2022 01:20:52 America/Halifax] Start...
+[30-Apr-2022 01:21:27 America/Halifax] Start...
+[30-Apr-2022 02:15:04 America/Halifax] Start...
+[30-Apr-2022 02:15:15 America/Halifax] Start...
+[01-May-2022 01:52:31 America/Halifax] PHP Fatal error:  Uncaught Error: Call to protected method Ptorres\PhpMvcComposer\lib\Controller::render() from global scope in /var/www/html/php-mvc-composer/src/lib/routes.php:23
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#2 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#3 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#4 /var/www/html/php-mvc-composer/src/lib/routes.php(55): Bramus\Router\Router->run()
+#5 /var/www/html/php-mvc-composer/index.php(17): require('...')
+#6 {main}
+  thrown in /var/www/html/php-mvc-composer/src/lib/routes.php on line 23
+[01-May-2022 02:26:41 America/Halifax] PHP Fatal error:  Uncaught PDOException: SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected in /var/www/html/php-mvc-composer/src/lib/Model.php:23
+Stack trace:
+#0 /var/www/html/php-mvc-composer/src/lib/Model.php(23): PDO->prepare()
+#1 /var/www/html/php-mvc-composer/src/models/User.php(32): Ptorres\PhpMvcComposer\lib\Model->prepare()
+#2 /var/www/html/php-mvc-composer/src/controllers/Signup.php(33): Ptorres\PhpMvcComposer\models\User->save()
+#3 /var/www/html/php-mvc-composer/src/lib/routes.php(28): Ptorres\PhpMvcComposer\controllers\Signup->register()
+#4 [internal function]: {closure}()
+#5 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#6 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#7 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#8 /var/www/html/php-mvc-composer/src/lib/routes.php(56): Bramus\Router\Router->run()
+#9 /var/www/html/php-mvc-composer/index.php(17): require('...')
+#10 {main}
+  thrown in /var/www/html/php-mvc-composer/src/lib/Model.php on line 23
+[01-May-2022 02:35:34 America/Halifax] PHP Fatal error:  Uncaught Error: Call to undefined method Ptorres\PhpMvcComposer\models\User::connect() in /var/www/html/php-mvc-composer/src/models/User.php:32
+Stack trace:
+#0 /var/www/html/php-mvc-composer/src/controllers/Signup.php(33): Ptorres\PhpMvcComposer\models\User->save()
+#1 /var/www/html/php-mvc-composer/src/lib/routes.php(28): Ptorres\PhpMvcComposer\controllers\Signup->register()
+#2 [internal function]: {closure}()
+#3 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#4 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#5 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#6 /var/www/html/php-mvc-composer/src/lib/routes.php(56): Bramus\Router\Router->run()
+#7 /var/www/html/php-mvc-composer/index.php(17): require('...')
+#8 {main}
+  thrown in /var/www/html/php-mvc-composer/src/models/User.php on line 32
+[01-May-2022 02:38:09 America/Halifax] PHP Fatal error:  Uncaught PDOException: SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected in /var/www/html/php-mvc-composer/src/lib/Model.php:23
+Stack trace:
+#0 /var/www/html/php-mvc-composer/src/lib/Model.php(23): PDO->prepare()
+#1 /var/www/html/php-mvc-composer/src/models/User.php(32): Ptorres\PhpMvcComposer\lib\Model->prepare()
+#2 /var/www/html/php-mvc-composer/src/controllers/Signup.php(33): Ptorres\PhpMvcComposer\models\User->save()
+#3 /var/www/html/php-mvc-composer/src/lib/routes.php(28): Ptorres\PhpMvcComposer\controllers\Signup->register()
+#4 [internal function]: {closure}()
+#5 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#6 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#7 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#8 /var/www/html/php-mvc-composer/src/lib/routes.php(56): Bramus\Router\Router->run()
+#9 /var/www/html/php-mvc-composer/index.php(17): require('...')
+#10 {main}
+  thrown in /var/www/html/php-mvc-composer/src/lib/Model.php on line 23
+[01-May-2022 02:46:58 America/Halifax] PHP Fatal error:  Uncaught PDOException: SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected in /var/www/html/php-mvc-composer/src/lib/Model.php:23
+Stack trace:
+#0 /var/www/html/php-mvc-composer/src/lib/Model.php(23): PDO->prepare()
+#1 /var/www/html/php-mvc-composer/src/models/User.php(32): Ptorres\PhpMvcComposer\lib\Model->prepare()
+#2 /var/www/html/php-mvc-composer/src/controllers/Signup.php(33): Ptorres\PhpMvcComposer\models\User->save()
+#3 /var/www/html/php-mvc-composer/src/lib/routes.php(28): Ptorres\PhpMvcComposer\controllers\Signup->register()
+#4 [internal function]: {closure}()
+#5 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#6 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#7 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#8 /var/www/html/php-mvc-composer/src/lib/routes.php(56): Bramus\Router\Router->run()
+#9 /var/www/html/php-mvc-composer/index.php(17): require('...')
+#10 {main}
+  thrown in /var/www/html/php-mvc-composer/src/lib/Model.php on line 23
+[01-May-2022 02:50:40 America/Halifax] PHP Fatal error:  Uncaught PDOException: SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected in /var/www/html/php-mvc-composer/src/lib/Model.php:24
+Stack trace:
+#0 /var/www/html/php-mvc-composer/src/lib/Model.php(24): PDO->prepare()
+#1 /var/www/html/php-mvc-composer/src/models/User.php(32): Ptorres\PhpMvcComposer\lib\Model->prepare()
+#2 /var/www/html/php-mvc-composer/src/controllers/Signup.php(33): Ptorres\PhpMvcComposer\models\User->save()
+#3 /var/www/html/php-mvc-composer/src/lib/routes.php(28): Ptorres\PhpMvcComposer\controllers\Signup->register()
+#4 [internal function]: {closure}()
+#5 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#6 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#7 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#8 /var/www/html/php-mvc-composer/src/lib/routes.php(56): Bramus\Router\Router->run()
+#9 /var/www/html/php-mvc-composer/index.php(17): require('...')
+#10 {main}
+  thrown in /var/www/html/php-mvc-composer/src/lib/Model.php on line 24
+[01-May-2022 03:00:20 America/Halifax] PHP Fatal error:  Uncaught PDOException: SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected in /var/www/html/php-mvc-composer/src/lib/Model.php:24
+Stack trace:
+#0 /var/www/html/php-mvc-composer/src/lib/Model.php(24): PDO->prepare()
+#1 /var/www/html/php-mvc-composer/src/models/User.php(33): Ptorres\PhpMvcComposer\lib\Model->prepare()
+#2 /var/www/html/php-mvc-composer/src/controllers/Signup.php(33): Ptorres\PhpMvcComposer\models\User->save()
+#3 /var/www/html/php-mvc-composer/src/lib/routes.php(28): Ptorres\PhpMvcComposer\controllers\Signup->register()
+#4 [internal function]: {closure}()
+#5 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#6 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#7 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#8 /var/www/html/php-mvc-composer/src/lib/routes.php(56): Bramus\Router\Router->run()
+#9 /var/www/html/php-mvc-composer/index.php(17): require('...')
+#10 {main}
+  thrown in /var/www/html/php-mvc-composer/src/lib/Model.php on line 24
+[01-May-2022 03:20:43 America/Halifax] PHP Fatal error:  Uncaught PDOException: SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected in /var/www/html/php-mvc-composer/src/lib/Model.php:24
+Stack trace:
+#0 /var/www/html/php-mvc-composer/src/lib/Model.php(24): PDO->prepare()
+#1 /var/www/html/php-mvc-composer/src/models/User.php(33): Ptorres\PhpMvcComposer\lib\Model->prepare()
+#2 /var/www/html/php-mvc-composer/src/controllers/Signup.php(33): Ptorres\PhpMvcComposer\models\User->save()
+#3 /var/www/html/php-mvc-composer/src/lib/routes.php(28): Ptorres\PhpMvcComposer\controllers\Signup->register()
+#4 [internal function]: {closure}()
+#5 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#6 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#7 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#8 /var/www/html/php-mvc-composer/src/lib/routes.php(56): Bramus\Router\Router->run()
+#9 /var/www/html/php-mvc-composer/index.php(17): require('...')
+#10 {main}
+  thrown in /var/www/html/php-mvc-composer/src/lib/Model.php on line 24
+[02-May-2022 10:16:56 America/Halifax] PHP Fatal error:  Uncaught PDOException: SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected in /var/www/html/php-mvc-composer/src/models/User.php:49
+Stack trace:
+#0 /var/www/html/php-mvc-composer/src/models/User.php(49): PDO->prepare()
+#1 /var/www/html/php-mvc-composer/src/controllers/Signup.php(33): Ptorres\PhpMvcComposer\models\User->save()
+#2 /var/www/html/php-mvc-composer/src/lib/routes.php(28): Ptorres\PhpMvcComposer\controllers\Signup->register()
+#3 [internal function]: {closure}()
+#4 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#5 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#6 /var/www/html/php-mvc-composer/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#7 /var/www/html/php-mvc-composer/src/lib/routes.php(56): Bramus\Router\Router->run()
+#8 /var/www/html/php-mvc-composer/index.php(17): require('...')
+#9 {main}
+  thrown in /var/www/html/php-mvc-composer/src/models/User.php on line 49
+[02-May-2022 10:30:42 America/Halifax] PHP Warning:  Unknown: open(/var/lib/php/sessions/sess_eei8obhtp507ffofptstsg6gas, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[02-May-2022 10:30:42 America/Halifax] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/var/lib/php/sessions) in Unknown on line 0

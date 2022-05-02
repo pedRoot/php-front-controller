@@ -1,0 +1,21 @@
+{
+    "name": "ptorres/php-mvc-composer",
+    "description": "practica sobre el manejo de las depencencias con composer aplicando MVC",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ptorres\\PhpMvcComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Torres"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "bramus/router": "dev-master",
+        "vlucas/phpdotenv": "5.4.x-dev"
+    }
+}
