@@ -24,7 +24,7 @@ class Signup extends Controller
             is_null($password) ||
             is_null($profile)
         ) {
-            error_log("------- $username empty");
+            error_log("ERROR: Fields required in Signup");
             return false;
         }
 

@@ -1,5 +1,11 @@
 <?php
 
+/***
+ * It's a class that allows you to render a view and get data from the request
+ * @author Pedro Torres <email@email.com>
+ * @date
+ * */
+
 namespace Ptorres\PhpMvcComposer\lib;
 
 use Ptorres\PhpMvcComposer\lib\View;

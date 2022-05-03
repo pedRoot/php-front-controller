@@ -3,6 +3,8 @@
 namespace Ptorres\PhpMvcComposer\lib;
 
 use PDO;
+use Error;
+use Exception;
 use PDOException;
 
 class Database
@@ -37,17 +39,15 @@ class Database
                 PDO::ATTR_EMULATE_PREPARES => false,
             ];
 
-            $pdo = new PDO(
+            return new PDO(
                 $conection,
                 $this->user,
                 $this->password,
                 $options
             );
-
-            return $pdo;
-        } catch (PDOException $e) {
-            error_log($e);
-            throw $e;
+        } catch (PDOException | Exception | Error $e) {
+            error_log(sprintf("ERROR: [%s]%s: %s", __METHOD__, $e->getLine(), $e->getMessage()));
+            return false;
         }
     }
 }

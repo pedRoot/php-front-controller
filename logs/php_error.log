@@ -123,3 +123,92 @@ Stack trace:
   thrown in /var/www/html/php-mvc-composer/src/models/User.php on line 49
 [02-May-2022 10:30:42 America/Halifax] PHP Warning:  Unknown: open(/var/lib/php/sessions/sess_eei8obhtp507ffofptstsg6gas, O_RDWR) failed: Permission denied (13) in Unknown on line 0
 [02-May-2022 10:30:42 America/Halifax] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/var/lib/php/sessions) in Unknown on line 0
+[02-May-2022 21:37:13 America/Halifax] Exception: ERROR - User/get: User not found!!! in /var/www/html/php-front-controller/src/models/User.php:92
+Stack trace:
+#0 /var/www/html/php-front-controller/src/controllers/Signin.php(33): Ptorres\PhpMvcComposer\models\User::get()
+#1 /var/www/html/php-front-controller/src/lib/routes.php(21): Ptorres\PhpMvcComposer\controllers\Signin->auth()
+#2 [internal function]: {closure}()
+#3 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#4 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#5 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#6 /var/www/html/php-front-controller/src/lib/routes.php(59): Bramus\Router\Router->run()
+#7 /var/www/html/php-front-controller/index.php(15): require('...')
+#8 {main}
+[02-May-2022 21:37:13 America/Halifax] PHP Fatal error:  Uncaught TypeError: Ptorres\PhpMvcComposer\models\User::get(): Return value must be of type Ptorres\PhpMvcComposer\models\User, bool returned in /var/www/html/php-front-controller/src/models/User.php:102
+Stack trace:
+#0 /var/www/html/php-front-controller/src/controllers/Signin.php(33): Ptorres\PhpMvcComposer\models\User::get()
+#1 /var/www/html/php-front-controller/src/lib/routes.php(21): Ptorres\PhpMvcComposer\controllers\Signin->auth()
+#2 [internal function]: {closure}()
+#3 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#4 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#5 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#6 /var/www/html/php-front-controller/src/lib/routes.php(59): Bramus\Router\Router->run()
+#7 /var/www/html/php-front-controller/index.php(15): require('...')
+#8 {main}
+  thrown in /var/www/html/php-front-controller/src/models/User.php on line 102
+[02-May-2022 21:37:46 America/Halifax] Exception: ERROR - User/get: User not found!!! in /var/www/html/php-front-controller/src/models/User.php:92
+Stack trace:
+#0 /var/www/html/php-front-controller/src/controllers/Signin.php(33): Ptorres\PhpMvcComposer\models\User::get()
+#1 /var/www/html/php-front-controller/src/lib/routes.php(21): Ptorres\PhpMvcComposer\controllers\Signin->auth()
+#2 [internal function]: {closure}()
+#3 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#4 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#5 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#6 /var/www/html/php-front-controller/src/lib/routes.php(59): Bramus\Router\Router->run()
+#7 /var/www/html/php-front-controller/index.php(15): require('...')
+#8 {main}
+[02-May-2022 21:37:46 America/Halifax] PHP Fatal error:  Uncaught TypeError: Ptorres\PhpMvcComposer\models\User::get(): Return value must be of type Ptorres\PhpMvcComposer\models\User, bool returned in /var/www/html/php-front-controller/src/models/User.php:102
+Stack trace:
+#0 /var/www/html/php-front-controller/src/controllers/Signin.php(33): Ptorres\PhpMvcComposer\models\User::get()
+#1 /var/www/html/php-front-controller/src/lib/routes.php(21): Ptorres\PhpMvcComposer\controllers\Signin->auth()
+#2 [internal function]: {closure}()
+#3 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#4 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#5 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#6 /var/www/html/php-front-controller/src/lib/routes.php(59): Bramus\Router\Router->run()
+#7 /var/www/html/php-front-controller/index.php(15): require('...')
+#8 {main}
+  thrown in /var/www/html/php-front-controller/src/models/User.php on line 102
+[02-May-2022 22:32:56 America/Halifax] PHP Fatal error:  Uncaught Error: Undefined constant PDO::TTR_DEFAULT_FETCH_MODE in /var/www/html/php-front-controller/src/lib/Database.php:36
+Stack trace:
+#0 /var/www/html/php-front-controller/src/models/User.php(53): Ptorres\PhpMvcComposer\lib\Database->conect()
+#1 /var/www/html/php-front-controller/src/controllers/Signin.php(29): Ptorres\PhpMvcComposer\models\User::exists()
+#2 /var/www/html/php-front-controller/src/lib/routes.php(26): Ptorres\PhpMvcComposer\controllers\Signin->auth()
+#3 [internal function]: {closure}()
+#4 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#5 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#6 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#7 /var/www/html/php-front-controller/src/lib/routes.php(69): Bramus\Router\Router->run()
+#8 /var/www/html/php-front-controller/index.php(15): require('...')
+#9 {main}
+  thrown in /var/www/html/php-front-controller/src/lib/Database.php on line 36
+[02-May-2022 22:35:33 America/Halifax] PHP Warning:  Undefined property: Exception::$getLine in /var/www/html/php-front-controller/src/lib/Database.php on line 50
+[02-May-2022 22:35:33 America/Halifax] PHP Warning:  Undefined property: Exception::$getMessage in /var/www/html/php-front-controller/src/lib/Database.php on line 50
+[02-May-2022 22:35:33 America/Halifax] PHP Fatal error:  Uncaught Error: Cannot access protected property Exception::$code in /var/www/html/php-front-controller/src/lib/Database.php:50
+Stack trace:
+#0 /var/www/html/php-front-controller/src/models/User.php(53): Ptorres\PhpMvcComposer\lib\Database->conect()
+#1 /var/www/html/php-front-controller/src/controllers/Signin.php(29): Ptorres\PhpMvcComposer\models\User::exists()
+#2 /var/www/html/php-front-controller/src/lib/routes.php(26): Ptorres\PhpMvcComposer\controllers\Signin->auth()
+#3 [internal function]: {closure}()
+#4 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#5 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#6 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#7 /var/www/html/php-front-controller/src/lib/routes.php(69): Bramus\Router\Router->run()
+#8 /var/www/html/php-front-controller/index.php(15): require('...')
+#9 {main}
+  thrown in /var/www/html/php-front-controller/src/lib/Database.php on line 50
+[02-May-2022 22:36:55 America/Halifax] PHP Warning:  Undefined property: Exception::$getLine in /var/www/html/php-front-controller/src/lib/Database.php on line 50
+[02-May-2022 22:36:55 America/Halifax] PHP Warning:  Undefined property: Exception::$getMessage in /var/www/html/php-front-controller/src/lib/Database.php on line 50
+[02-May-2022 22:36:55 America/Halifax] PHP Fatal error:  Uncaught Error: Cannot access protected property Exception::$code in /var/www/html/php-front-controller/src/lib/Database.php:50
+Stack trace:
+#0 /var/www/html/php-front-controller/src/models/User.php(53): Ptorres\PhpMvcComposer\lib\Database->conect()
+#1 /var/www/html/php-front-controller/src/controllers/Signin.php(29): Ptorres\PhpMvcComposer\models\User::exists()
+#2 /var/www/html/php-front-controller/src/lib/routes.php(26): Ptorres\PhpMvcComposer\controllers\Signin->auth()
+#3 [internal function]: {closure}()
+#4 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array()
+#5 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke()
+#6 /var/www/html/php-front-controller/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle()
+#7 /var/www/html/php-front-controller/src/lib/routes.php(69): Bramus\Router\Router->run()
+#8 /var/www/html/php-front-controller/index.php(15): require('...')
+#9 {main}
+  thrown in /var/www/html/php-front-controller/src/lib/Database.php on line 50

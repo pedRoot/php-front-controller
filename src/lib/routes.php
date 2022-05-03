@@ -1,21 +1,29 @@
 <?php
 
 use Ptorres\PhpMvcComposer\controllers\Signup;
+use Ptorres\PhpMvcComposer\controllers\Signin;
 
 $router = new \Bramus\Router\Router();
 
 session_start();
 
+$router->before('GET', '/', function () {
+    $destination = isset($_SESSION['user']) ? '/home' : '/signin';
+    header("location: $destination");
+});
+
 $router->get('/', function () {
-    echo 'login';
+    echo 'Wercome';
 });
 
 $router->get('/signin', function () {
-    echo 'login';
+    $controller = new Signin();
+    $controller->render('signin/index');
 });
 
 $router->post('/auth', function () {
-    echo 'auth';
+    $controller = new Signin();
+    $controller->auth();
 });
 
 $router->get('/signup', function () {
@@ -26,6 +34,11 @@ $router->get('/signup', function () {
 $router->post('/register', function () {
     $controller = new Signup();
     $controller->register();
+});
+
+$router->get('/signout', function () {
+    session_destroy();
+    header('location: /');
 });
 
 $router->get('/home', function () {

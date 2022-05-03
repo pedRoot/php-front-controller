@@ -3,6 +3,7 @@
 namespace Ptorres\PhpMvcComposer\models;
 
 use PDO;
+use Exception;
 use PDOException;
 use Ptorres\PhpMvcComposer\lib\Model;
 use Ptorres\PhpMvcComposer\lib\Database;
@@ -24,7 +25,7 @@ class User extends Model
         $this->profile = "";
     }
 
-    public function save()
+    public function save(): bool
     {
         //TODO
         //Validar que exista el usuario
@@ -38,7 +39,28 @@ class User extends Model
                 'profile'  => $this->profile,
             ]);
             return true;
-        } catch (PDOException $e) {
+        } catch (PDOException | Exception $e) {
+            error_log($e);
+            return false;
+        }
+    }
+
+    public static function exists(string $username): bool
+    {
+        try {
+            $db = new Database();
+
+            $query = $db->conect()->prepare(
+                'SELECT username FROM users where username = :username;'
+            );
+            $query->execute(['username'  => $username]);
+
+            if ($query->rowCount() < 0) {
+                throw new Exception("ERROR - User/exists: User not found!!!");
+            }
+
+            return true;
+        } catch (PDOException | Exception $e) {
             error_log($e);
             return false;
         }
@@ -51,6 +73,37 @@ class User extends Model
         ]);
     }
 
+    public function comparePassword(string $password): bool
+    {
+        return password_verify($password, $this->password);
+    }
+
+    public static function get(string $username): User
+    {
+        try {
+            $db = new Database();
+
+            $query = $db->conect()->prepare(
+                'SELECT * FROM users where username = :username;'
+            );
+            $query->execute(['username'  => $username]);
+
+            if ($query->rowCount() < 0) {
+                throw new Exception("ERROR - User/get: User not found!!!");
+            }
+
+            $dataUser = $query->fetch();
+            $user = new User($dataUser['username'], $dataUser['password']);
+            $user->setId($dataUser['user_id']);
+            $user->setProfile($dataUser['profile']);
+
+            return $user;
+        } catch (PDOException | Exception $e) {
+            error_log($e);
+            return false;
+        }
+    }
+
     public function getId(): string
     {
         return $this->id;
@@ -61,12 +114,12 @@ class User extends Model
         $this->id = $value;
     }
 
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->username;
     }
 
-    public function getPosts()
+    public function getPosts(): array
     {
         return $this->posts;
     }
@@ -81,7 +134,7 @@ class User extends Model
         $this->profile = $value;
     }
 
-    public function getProfile()
+    public function getProfile(): string
     {
         return $this->profile;
     }
